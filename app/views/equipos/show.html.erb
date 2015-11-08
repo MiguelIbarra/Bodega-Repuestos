@@ -1,0 +1,15 @@
+
+<center>
+ <div class="mostrar">
+<p>
+  <strong>Codequipo:</strong>
+  <%= @equipo.codequipo %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @equipo.tipo %>
+</p>
+</div>
+<%= link_to 'Edit', edit_equipo_path(@equipo) %> |
+<%= link_to 'Back', equipos_path %>

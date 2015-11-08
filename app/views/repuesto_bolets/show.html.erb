@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Repuesto:</strong>
+  <%= @repuesto_bolet.repuesto.codrepuesto %>
+</p>
+
+<p>
+  <strong>Bolet:</strong>
+  <%= @repuesto_bolet.bolet.numboleta %>
+</p>
+
+<%= link_to 'Edit', edit_repuesto_bolet_path(@repuesto_bolet) %> |
+<%= link_to 'Back', repuesto_bolets_path %>

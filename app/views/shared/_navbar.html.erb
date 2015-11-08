@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse ">
+  <% if usuario_signed_in? %>
+      <a class="navbar-brand navbar-right" href="<%= edit_usuario_registration_path(current_usuario) %>">Editar Perfil</a>
+      <a class="navbar-brand navbar-right" href="<%= destroy_usuario_session_path  %>", data-method="delete"> Cerrar Sesion </a>
+
+      <a class="navbar-brand" href="<%= inicio_index_path %>">Inicio</a>
+      <a class="navbar-brand" href="<%=repuestos_path %>">Repuestos </a>
+      <a class="navbar-brand" href="<%= equipos_path %>">Equipos</a>
+      <a class="navbar-brand" href="<%= clientes_path %>">Clientes</a>
+      <a class="navbar-brand" href="<%= bolets_path %>">Boletas</a>
+      <a class="navbar-brand" href="<%= repuesto_bolets_path %>">Detalle Boletas</a>
+      
+
+  <%else%>
+      <a class="navbar-brand navbar" href="<%= new_usuario_session_path %>">Ingresar</a>
+
+  <%end%>
+</nav>

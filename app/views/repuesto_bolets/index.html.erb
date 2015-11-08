@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Listing Repuesto Bolets</h1>
+
+<table class="table table-condensed" id="contenedor">
+  <thead>
+    <tr>
+      <th>Repuesto</th>
+      <th>Bolet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repuesto_bolets.each do |repuesto_bolet| %>
+      <tr>
+        <td><%= repuesto_bolet.repuesto.codrepuesto %></td>
+        <td><%= repuesto_bolet.bolet.numboleta %></td>
+        <td>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-eye-open"  ></span>
+          <%= link_to 'Show', repuesto_bolet %>
+        </button></td>
+        <td>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-pencil"  ></span>
+          <%= link_to 'Edit', edit_repuesto_bolet_path(repuesto_bolet) %>
+        </button></td>
+        <td>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-trash"  ></span>
+          <%= link_to 'Destroy', repuesto_bolet, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-plus" ></span>
+<%= link_to 'New Repuesto bolet', new_repuesto_bolet_path %>
+  </button>

@@ -1,0 +1,34 @@
+<%= form_for(@repuesto) do |f| %>
+  <% if @repuesto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@repuesto.errors.count, "error") %> prohibited this repuesto from being saved:</h2>
+
+      <ul>
+      <% @repuesto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codrepuesto %><br>
+    <%= f.text_field :codrepuesto %>
+  </div>
+  <div class="field">
+    <%= f.label :nombrerepuesto %><br>
+    <%= f.text_field :nombrerepuesto %>
+  </div>
+  <div class="field">
+    <%= f.label :valorrepuesto %><br>
+    <%= f.number_field :valorrepuesto %>
+  </div>
+  <div class="field">
+    <%= f.label :equipo_id %><br>
+    <%= f.select( "equipo_id",Equipo.all.collect{|l| [ l.codequipo, l.id ] }, {include_blank: 'Seleccione equipo'})  %>
+    
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Listing Equipos</h1>
+
+<table class="table table-condensed" id="contenedor">
+  <thead>
+    <tr>
+      <th>Codequipo</th>
+      <th>Tipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipos.each do |equipo| %>
+      <tr>
+        <td><%= equipo.codequipo %></td>
+        <td><%= equipo.tipo %></td>
+        <td>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-eye-open"  ></span>
+          <%= link_to 'Show', equipo %>
+        </button></td>
+        <% if current_usuario.cargo == "administrador" %>
+        <td>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-pencil" ></span>
+          <%= link_to 'Edit', edit_equipo_path(equipo) %>
+        </button></td>
+        <td>
+          <button type="button" class="btn btn-default btn-xs">
+          <span class="glyphicon glyphicon-trash" ></span>
+          <%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </button></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-plus" ></span>
+<%= link_to 'New Equipo', new_equipo_path %>
+</button>

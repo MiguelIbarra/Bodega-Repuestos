@@ -1,0 +1,28 @@
+<center>
+ <div class="mostrar">
+
+<p>
+  <strong>Codrepuesto:</strong>
+  <%= @repuesto.codrepuesto %>
+</p>
+
+<p>
+  <strong>Nombrerepuesto:</strong>
+  <%= @repuesto.nombrerepuesto %>
+</p>
+
+<p>
+  <strong>Valorrepuesto:</strong>
+  <%= @repuesto.valorrepuesto %>
+</p>
+
+<p>
+  <strong>Equipo:</strong>
+  <%= @repuesto.equipo.codequipo %>
+</p>
+
+
+</div>
+
+<%= link_to 'Edit', edit_repuesto_path(@repuesto) %> |
+<%= link_to 'Back', repuestos_path %>

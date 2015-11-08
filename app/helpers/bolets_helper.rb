@@ -1,0 +1,2 @@
+module BoletsHelper
+end
