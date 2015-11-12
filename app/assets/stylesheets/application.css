@@ -35,9 +35,16 @@
 
  body
      {
+       background: rgba(183,222,237,1);
+      background: -moz-radial-gradient(center, ellipse cover, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 24%, rgba(33,180,226,1) 66%, rgba(183,222,237,1) 96%, rgba(183,222,237,1) 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(183,222,237,1)), color-stop(24%, rgba(113,206,239,1)), color-stop(66%, rgba(33,180,226,1)), color-stop(96%, rgba(183,222,237,1)), color-stop(100%, rgba(183,222,237,1)));
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 24%, rgba(33,180,226,1) 66%, rgba(183,222,237,1) 96%, rgba(183,222,237,1) 100%);
+      background: -o-radial-gradient(center, ellipse cover, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 24%, rgba(33,180,226,1) 66%, rgba(183,222,237,1) 96%, rgba(183,222,237,1) 100%);
+      background: -ms-radial-gradient(center, ellipse cover, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 24%, rgba(33,180,226,1) 66%, rgba(183,222,237,1) 96%, rgba(183,222,237,1) 100%);
+      background: radial-gradient(ellipse at center, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 24%, rgba(33,180,226,1) 66%, rgba(183,222,237,1) 96%, rgba(183,222,237,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=1 );
 
-         background-image: url("imagen.jpg");
-         font-style: italic;
+
        }
 .field
 {
