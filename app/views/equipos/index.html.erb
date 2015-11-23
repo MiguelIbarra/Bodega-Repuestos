@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<center><h1>Listing Equipos</h1>
+<center><h1> Equipos</h1>
 
 <table class="table table-condensed" id="contenedor">
   <thead>
@@ -19,18 +19,18 @@
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-eye-open"  ></span>
-          <%= link_to 'Show', equipo %>
+          <%= link_to 'Mostrar', equipo %>
         </button></td>
-        <% if current_usuario.cargo == "administrador" %>
+        <% if current_usuario.email == "miguel@gmail.com" %>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-pencil" ></span>
-          <%= link_to 'Edit', edit_equipo_path(equipo) %>
+          <%= link_to 'Editar', edit_equipo_path(equipo) %>
         </button></td>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-trash" ></span>
-          <%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Eliminar', equipo, method: :delete, data: { confirm: 'Are you sure?' } %>
         </button></td>
         <% end %>
       </tr>
@@ -41,5 +41,5 @@
 <br>
 <button type="button" class="btn btn-default btn-xs">
 <span class="glyphicon glyphicon-plus" ></span>
-<%= link_to 'New Equipo', new_equipo_path %>
+<%= link_to 'Nuevo Equipo', new_equipo_path %>
 </button>

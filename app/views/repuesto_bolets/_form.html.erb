@@ -11,12 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+    <div align="center" >
+  <div align="left" class="field">
     <%= f.label :repuesto_id %><br>
     <%= f.select( "repuesto_id",Repuesto.all.collect{|l| [ l.codrepuesto, l.id ] }, {include_blank: 'Seleccione repuesto'})  %>
 
   </div>
-  <div class="field">
+  <div align="left" class="field">
     <%= f.label :bolet_id %><br>
     <%= f.select( "bolet_id",Bolet.all.collect{|l| [ l.numboleta, l.id ] }, {include_blank: 'Seleccione numero boleta'})  %>
 

@@ -1,5 +1,6 @@
 class RepuestosController < ApplicationController
   before_action :set_repuesto, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!
 
   # GET /repuestos
   # GET /repuestos.json
@@ -10,7 +11,7 @@ class RepuestosController < ApplicationController
   # GET /repuestos/1
   # GET /repuestos/1.json
   def show
-    
+
   end
 
   # GET /repuestos/new

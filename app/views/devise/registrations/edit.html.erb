@@ -12,11 +12,7 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :cargo %><br />
-    <%= f.select :cargo, options_for_select([["Usuario"], ["Vendedor"]]) %>
-
-  </div>
+  
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />

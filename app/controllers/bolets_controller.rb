@@ -1,6 +1,6 @@
 class BoletsController < ApplicationController
   before_action :set_bolet, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_usuario!
   # GET /bolets
   # GET /bolets.json
   def index

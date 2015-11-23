@@ -1,14 +1,23 @@
-<p id="notice"><%= notice %></p>
+<center>
+<table class="table table-bordered" id="vista">
 
-<p>
-  <strong>Repuesto:</strong>
-  <%= @repuesto_bolet.repuesto.codrepuesto %>
-</p>
+<tr>
+  <th>Repuesto:
+  <%= @repuesto_bolet.repuesto.codrepuesto %></th>
+</tr>
 
-<p>
-  <strong>Bolet:</strong>
-  <%= @repuesto_bolet.bolet.numboleta %>
-</p>
+<tr>
+  <th>Bolet:
+  <%= @repuesto_bolet.bolet.numboleta %></th>
+</tr>
+</table>
 
-<%= link_to 'Edit', edit_repuesto_bolet_path(@repuesto_bolet) %> |
-<%= link_to 'Back', repuesto_bolets_path %>
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-pencil" ></span>
+<%= link_to 'Editar', edit_repuesto_bolet_path(@repuesto_bolet) %>
+</button>
+
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-arrow-left" ></span>
+<%= link_to 'Atras', repuesto_bolets_path %>
+</button>

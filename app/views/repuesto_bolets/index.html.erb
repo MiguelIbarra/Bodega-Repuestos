@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<center><h1>Listing Repuesto Bolets</h1>
+<center><h1>Detalle de  Boletas</h1>
 
 <table class="table table-condensed" id="contenedor">
   <thead>
@@ -19,17 +19,17 @@
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-eye-open"  ></span>
-          <%= link_to 'Show', repuesto_bolet %>
+          <%= link_to 'Mostrar', repuesto_bolet %>
         </button></td>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-pencil"  ></span>
-          <%= link_to 'Edit', edit_repuesto_bolet_path(repuesto_bolet) %>
+          <%= link_to 'Editar', edit_repuesto_bolet_path(repuesto_bolet) %>
         </button></td>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-trash"  ></span>
-          <%= link_to 'Destroy', repuesto_bolet, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Eliminar', repuesto_bolet, method: :delete, data: { confirm: 'Are you sure?' } %>
         </button></td>
       </tr>
     <% end %>
@@ -39,5 +39,5 @@
 <br>
 <button type="button" class="btn btn-default btn-xs">
 <span class="glyphicon glyphicon-plus" ></span>
-<%= link_to 'New Repuesto bolet', new_repuesto_bolet_path %>
+<%= link_to 'Nuevo Detalle Boleta', new_repuesto_bolet_path %>
   </button>

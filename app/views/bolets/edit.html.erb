@@ -1,6 +1,14 @@
-<h1>Editing Bolet</h1>
+<h1>Editar Boleta</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @bolet %> |
-<%= link_to 'Back', bolets_path %>
+<button type="button" class="btn btn-default btn-xs" >
+<span class="glyphicon glyphicon-eye-open"  ></span>
+<%= link_to 'Mostrar', @bolet %> 
+</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-arrow-left" ></span>
+<%= link_to 'Atras', bolets_path %>
+</button>

@@ -24,6 +24,7 @@
       </tr>
     </thead>
 
+
   <tbody>
   <% @repuestos.each do |repuesto| %>
     <tr>
@@ -33,8 +34,20 @@
       <td><%= repuesto.equipo.codequipo %></td>
     </tr>
   <% end %>
+
 </tbody>
 </table>
 
-<%= link_to 'Edit', edit_bolet_path(@bolet) %> |
-<%= link_to 'Back', bolets_path %>
+  <button type="button" class="btn btn-default btn-xs">
+  <span class="glyphicon glyphicon-list-alt" ></span>
+  <%= link_to 'Detalle Boleta', new_repuesto_bolet_path %>
+  </button>
+
+  <button type="button" class="btn btn-default btn-xs">
+  <span class="glyphicon glyphicon-pencil" ></span>
+  <%= link_to 'Editar', edit_bolet_path(@bolet) %>
+  </button>
+  <button type="button" class="btn btn-default btn-xs">
+  <span class="glyphicon glyphicon-arrow-left" ></span>
+  <%= link_to 'Atras', bolets_path %>
+  </button>

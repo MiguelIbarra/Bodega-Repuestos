@@ -1,28 +1,36 @@
 <center>
- <div class="mostrar">
-
-<p>
-  <strong>Codrepuesto:</strong>
-  <%= @repuesto.codrepuesto %>
-</p>
-
-<p>
-  <strong>Nombrerepuesto:</strong>
-  <%= @repuesto.nombrerepuesto %>
-</p>
-
-<p>
-  <strong>Valorrepuesto:</strong>
-  <%= @repuesto.valorrepuesto %>
-</p>
-
-<p>
-  <strong>Equipo:</strong>
-  <%= @repuesto.equipo.codequipo %>
-</p>
+<table class="table table-bordered" id="vista">
 
 
-</div>
+<tr>
+  <th>Cod.Repuesto:
+  <%= @repuesto.codrepuesto %></th>
+</tr>
 
-<%= link_to 'Edit', edit_repuesto_path(@repuesto) %> |
-<%= link_to 'Back', repuestos_path %>
+<tr>
+  <th>Nombre Repuesto:
+  <%= @repuesto.nombrerepuesto %></th>
+</tr>
+
+<tr>
+  <th>Valor Repuesto:
+  <%= @repuesto.valorrepuesto %></th>
+</tr>
+
+<tr>
+  <th>Cod. Equipo:
+  <%= @repuesto.equipo.codequipo %></th>
+</tr>
+
+
+
+</table>
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-pencil" ></span>
+<%= link_to 'Editar', edit_repuesto_path(@repuesto) %>
+</button>
+
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-arrow-left" ></span>
+<%= link_to 'Atras', repuestos_path %>
+</button>

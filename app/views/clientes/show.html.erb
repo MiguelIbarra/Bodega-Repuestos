@@ -1,35 +1,43 @@
 <center>
- <div class="mostrar">
+<table class="table table-bordered" id="vista">
 
-<p>
-  <strong>Rut:</strong>
-  <%= @cliente.rut %>
-</p>
+<tr>
+  <th>Rut:
+  <%= @cliente.rut %></th>
+</tr>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @cliente.nombre %>
-</p>
+<tr>
+  <th>Nombre:
+  <%= @cliente.nombre %></th>
+</tr>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @cliente.apellido %>
-</p>
+<tr>
+  <th>Apellido:
+  <%= @cliente.apellido %></th>
+</tr>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @cliente.direccion %>
-</p>
+<tr>
+  <th>Direccion:
+  <%= @cliente.direccion %></th>
+</tr>
 
-<p>
-  <strong>Correo:</strong>
-  <%= @cliente.correo %>
-</p>
+<tr>
+  <th>Correo:
+  <%= @cliente.correo %></th>
+</tr>
 
-<p>
-  <strong>Fono:</strong>
-  <%= @cliente.fono %>
-</p>
-</div>
-<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
-<%= link_to 'Back', clientes_path %>
+<tr>
+  <th>Fono:
+  <%= @cliente.fono %></th>
+</tr>
+
+</table>
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-pencil" ></span>
+<%= link_to 'Editar', edit_cliente_path(@cliente) %> 
+</button>
+
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-arrow-left" ></span>
+<%= link_to 'Atras', clientes_path %>
+</button>

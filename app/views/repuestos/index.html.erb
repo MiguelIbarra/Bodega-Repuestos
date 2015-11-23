@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<center> <h1>Listing Repuestos</h1>
+<center> <h1> Repuestos</h1>
 
 <table class="table table-condensed" id="contenedor">
   <thead>
     <tr>
-      <th>Codrepuesto</th>
-      <th>Nombrerepuesto</th>
-      <th>Valorrepuesto</th>
-      <th>Equipo</th>
+      <th>Cod. Repuesto</th>
+      <th>Nombre Repuesto</th>
+      <th>Valor Repuesto</th>
+      <th>Cod. Equipo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,18 +23,18 @@
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-eye-open"  ></span>
-          <%= link_to 'Show', repuesto %>
+          <%= link_to 'Mostrar', repuesto %>
         </button></td>
-        <% if current_usuario.cargo == "administrador" %>
+        <% if current_usuario.email == "miguel@gmail.com" %>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-pencil" ></span>
-          <%= link_to 'Edit', edit_repuesto_path(repuesto) %>
+          <%= link_to 'Editar', edit_repuesto_path(repuesto) %>
         </button></td>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-trash" ></span>
-          <%= link_to 'Destroy', repuesto, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Eliminar', repuesto, method: :delete, data: { confirm: 'Are you sure?' } %>
         </button></td>
         <% end %>
       </tr>
@@ -45,5 +45,5 @@
 <br>
 <button type="button" class="btn btn-default btn-xs">
 <span class="glyphicon glyphicon-plus" ></span>
-<%= link_to 'New Repuesto', new_repuesto_path %>
+<%= link_to 'Nuevo Repuesto', new_repuesto_path %>
     </button>

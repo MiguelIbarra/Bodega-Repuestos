@@ -10,19 +10,19 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div align="center" >
+  <div align="left" class="field">
     <%= f.label :numboleta %><br>
     <%= f.number_field :numboleta %>
   </div>
-  <div class="field">
+  <div align="left" class="field">
     <%= f.label :fecha %><br>
     <%= f.date_select :fecha %>
   </div>
-  <div class="field">
+  <div align="left" class="field">
     <%= f.label :cliente_id %><br>
     <%= f.select( "cliente_id",Cliente.all.collect{|l| [ l.nombre, l.id ] }, {include_blank: 'Seleccione nombre'})  %>
-    
+
   </div>
   <div class="actions">
     <%= f.submit %>

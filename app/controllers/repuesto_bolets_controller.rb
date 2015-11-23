@@ -1,5 +1,6 @@
 class RepuestoBoletsController < ApplicationController
   before_action :set_repuesto_bolet, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!
 
   # GET /repuesto_bolets
   # GET /repuesto_bolets.json

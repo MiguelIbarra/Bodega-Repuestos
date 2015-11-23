@@ -1,15 +1,25 @@
 
 <center>
- <div class="mostrar">
-<p>
-  <strong>Codequipo:</strong>
-  <%= @equipo.codequipo %>
-</p>
+<table class="table table-bordered" id="vista">
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @equipo.tipo %>
-</p>
+<tr>
+  <th>Codequipo:
+  <%= @equipo.codequipo %></th>
+</tr>
+
+<tr>
+  <th>Tipo:
+  <%= @equipo.tipo %></th>
+</tr>
 </div>
-<%= link_to 'Edit', edit_equipo_path(@equipo) %> |
-<%= link_to 'Back', equipos_path %>
+
+</table>
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-pencil" ></span>
+<%= link_to 'Editar', edit_equipo_path(@equipo) %>
+</button>
+
+<button type="button" class="btn btn-default btn-xs">
+<span class="glyphicon glyphicon-arrow-left" ></span>
+<%= link_to 'Atras', equipos_path %>
+</button>

@@ -27,18 +27,18 @@
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-eye-open"  ></span>
-          <%= link_to 'Show', cliente %>
+          <%= link_to 'Mostrar', cliente %>
         </button> </td>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-pencil"  ></span>
-          <%= link_to 'Edit', edit_cliente_path(cliente) %>
+          <%= link_to 'Editar', edit_cliente_path(cliente) %>
         </button> </td>
-        <% if current_usuario.cargo == "administrador" %>
+        <% if current_usuario.email == "miguel@gmail.com" %>
         <td>
           <button type="button" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-trash"  ></span>
-          <%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Are you sure?' } %>
         </button></td>
           <% end %>
       </tr>
